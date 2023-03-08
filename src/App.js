@@ -3,12 +3,22 @@ import "animate.css";
 import "./App.css";
 
 function App() {
-  const [closeAlert, setCloseAlert] = useState()
+  const [closeAlert, setCloseAlert] = useState();
   return (
     <div className="overflow-hidden">
-      <div 
-        onClick={() => setCloseAlert(' animate-fade-up animate-ease-out animate-reverse animate-fill-forwards')}
-        className={"fixed w-screen h-screen z-[999] bg-[#00000087] text-gray-800 " + closeAlert}
+      <div
+        onClick={() => {
+          setCloseAlert(
+            " animate-fade-up animate-ease-out animate-reverse animate-fill-forwards"
+          );
+          setTimeout(() => {
+            setCloseAlert(" hidden");
+          }, 1000);
+        }}
+        className={
+          "fixed w-screen h-screen z-[999] bg-[#00000087] text-gray-800 " +
+          closeAlert
+        }
       >
         <div className="animate-fade-up animate-ease-in animate-fill-forwards">
           <div className="flex justify-center bg-yellow-200 max-w-sm rounded-2xl mx-auto mt-32">
@@ -27,7 +37,16 @@ function App() {
 
             <div className="w-auto text-grey-darker items-center p-4">
               <p className="leading-tight font2">
-                Please be aware, this website is still in progress and not yet mobile responsive. Take a look at my other <a className="text-lg text-black underline underline-offset-4" href="https://www.keagan.website" target="_blank" rel="noreferrer">projects</a>
+                Please be aware, this website is still in progress and not yet
+                mobile responsive. Take a look at my other{" "}
+                <a
+                  className="text-lg text-black underline underline-offset-4"
+                  href="https://www.keagan.website"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  projects
+                </a>
               </p>
             </div>
             <div className="mr-2 mt-2">
