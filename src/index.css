@@ -5,7 +5,8 @@ body {
   margin: 0;
   font-family: "bebas-neue-pro", sans-serif;
   font-style: normal;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  color: hsla(0,0%,100%,.8);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000511;

@@ -1,13 +1,74 @@
 @import url("https://use.typekit.net/rxq6tdz.css");
-@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
-
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    rgb(102, 179, 197),
+    rgb(130, 93, 167) 47.52%,
+    rgb(187, 101, 113)
+  );
+}
+::-webkit-scrollbar-track {
+  background: #000512;
+}
+.btns {
+  position: relative;
+  padding-bottom: 0.28rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.spacing {
+  letter-spacing: 0.08em;
+
+}
+.btns::before {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(93.3deg, #66b3c5, #825da7 47.52%, #bb6571);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.btns:hover::before {
+  transform: scaleX(1);
+}
+.navbar-btn {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  padding: 1.53rem 2.99rem 1.39rem 3.06rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0.07rem solid #bcf3ff;
+  background-color: transparent;
+  color: #bcf3ff;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .hero-content {
-  line-height: .73;
+  line-height: 0.73;
   font-weight: 700;
 }
 .hero-header {
@@ -18,9 +79,26 @@
   line-height: 1.3888888888888888;
 }
 .font3 {
-  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
 }
 .MobileBg {
-  background: url("https://assets.website-files.com/62f52e1f730760cd231bb250/62f53fdeb9180f1a014f595b_bg.webp") no-repeat;
+  background: url("https://assets.website-files.com/62f52e1f730760cd231bb250/62f53fdeb9180f1a014f595b_bg.webp")
+    no-repeat;
   background-size: cover;
+}
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(40%, rgba(0, 5, 18, 0)),
+    to(#000512)
+  );
+  background-image: linear-gradient(180deg, rgba(0, 5, 18, 0) 40%, #000512);
 }
